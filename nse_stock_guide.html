@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NSE Investment Guide 2026 | Kenya Stock Market</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #00A86B;
+    --green-light: #00C97F;
+    --green-pale: #E6F9F2;
+    --red: #E8394A;
+    --red-pale: #FEF0F1;
+    --gold: #D4A017;
+    --gold-pale: #FDF6E3;
+    --dark: #0D1B2A;
+    --dark-2: #1A2E42;
+    --mid: #3A5068;
+    --light: #F4F8FB;
+    --white: #FFFFFF;
+    --border: #D6E4EE;
+    --text: #2C3E50;
+    --text-muted: #6B8299;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 60%, #0A3D2B 100%);
+    color: white;
+    padding: 60px 40px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(0,168,107,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: 10%;
+    width: 600px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--green), transparent);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(0,168,107,0.2);
+    border: 1px solid rgba(0,168,107,0.4);
+    color: var(--green-light);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero h1 span { color: var(--green-light); }
+  .hero p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .hero-stat {
+    text-align: center;
+  }
+  .hero-stat .val {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--green-light);
+  }
+  .hero-stat .lbl {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* LAYOUT */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* SECTION HEADER */
+  .section {
+    padding: 56px 0;
+  }
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 3.5vw, 36px);
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 10px;
+  }
+  .section-sub {
+    font-size: 15px;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin-bottom: 36px;
+  }
+
+  /* EXPLAINER BOXES */
+  .explainer {
+    background: var(--gold-pale);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 10px 10px 0;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    font-size: 14px;
+    color: #5a4200;
+  }
+  .explainer strong { color: #3a2a00; }
+
+  /* TOP PERFORMERS TABLE */
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(13,27,42,0.08);
+    margin-bottom: 12px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 14px;
+  }
+  thead {
+    background: var(--dark);
+    color: white;
+  }
+  thead th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+  tbody tr:hover { background: var(--green-pale); }
+  tbody td {
+    padding: 13px 16px;
+    vertical-align: middle;
+  }
+  .ticker {
+    font-weight: 700;
+    color: var(--dark);
+    background: var(--light);
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+  .growth-high { color: var(--green); font-weight: 700; }
+  .growth-med { color: #1a7a4a; font-weight: 600; }
+  .risk-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  .risk-very-high { background: #fde8ea; color: var(--red); }
+  .risk-high { background: #fff0e0; color: #c25a00; }
+  .risk-moderate { background: #e8f5ff; color: #1a6aaa; }
+  .risk-low { background: var(--green-pale); color: #006640; }
+
+  /* CARDS GRID */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 12px;
+  }
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 3px 16px rgba(13,27,42,0.07);
+    border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(13,27,42,0.12);
+  }
+  .card-rank {
+    position: absolute;
+    top: 16px; right: 16px;
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(0,168,107,0.07);
+    line-height: 1;
+  }
+  .card-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 4px;
+  }
+  .card-ticker { font-size: 12px; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+  .card-growth {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--green);
+    margin-bottom: 4px;
+  }
+  .card-growth-label { font-size: 12px; color: var(--text-muted); margin-bottom: 14px; }
+  .card-price-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+  .price-item { flex: 1; }
+  .price-item .pl { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .price-item .pv { font-size: 15px; font-weight: 600; color: var(--dark); }
+  .arrow { color: var(--green); margin: 0 4px; }
+  .card-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+  }
+
+  /* SAFE PICKS */
+  .safe-card {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 3px 16px rgba(13,27,42,0.07);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    transition: transform 0.2s;
+  }
+  .safe-card:hover { transform: translateY(-2px); }
+  .safe-icon {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+  .icon-bank { background: #e8f5ff; }
+  .icon-industry { background: #f0f9f4; }
+  .icon-consumer { background: #fff8e6; }
+  .icon-insurance { background: #fce8ff; }
+  .safe-name { font-weight: 700; color: var(--dark); font-size: 15px; margin-bottom: 2px; }
+  .safe-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+  .safe-growth { font-size: 20px; font-weight: 700; color: var(--green); margin-bottom: 6px; }
+  .safe-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+  /* TIMING SECTION */
+  .timing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 20px;
+  }
+  .timing-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 16px rgba(13,27,42,0.07);
+    border: 1px solid var(--border);
+  }
+  .timing-header {
+    padding: 18px 22px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .timing-header.eqty { background: linear-gradient(135deg, #0a3d6b, #1a6aaa); }
+  .timing-header.coop { background: linear-gradient(135deg, #0a5c2a, #00A86B); }
+  .timing-header.eabl { background: linear-gradient(135deg, #7a1a00, #c94a00); }
+  .timing-sub { font-size: 12px; opacity: 0.75; font-weight: 400; margin-top: 2px; }
+  .timing-body { padding: 18px 22px; }
+  .month-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  .month-name {
+    width: 90px;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--dark);
+  }
+  .month-bar-wrap { flex: 1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+  .month-bar { height: 100%; border-radius: 4px; background: var(--green); }
+  .month-price { font-size: 12px; color: var(--text-muted); width: 65px; text-align: right; }
+  .month-tag {
+    font-size: 10px;
+    background: var(--green-pale);
+    color: var(--green);
+    padding: 2px 7px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .timing-why {
+    font-size: 13px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+    margin-top: 4px;
+    line-height: 1.55;
+  }
+
+  /* PROCESS STEPS */
+  .steps-list { list-style: none; }
+  .step-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 28px;
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 2px 12px rgba(13,27,42,0.06);
+    border: 1px solid var(--border);
+    transition: transform 0.2s;
+  }
+  .step-item:hover { transform: translateX(4px); }
+  .step-num {
+    width: 44px; height: 44px;
+    background: var(--dark);
+    color: white;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .step-content {}
+  .step-title { font-weight: 700; font-size: 16px; color: var(--dark); margin-bottom: 6px; }
+  .step-desc { font-size: 14px; color: var(--text-muted); margin-bottom: 10px; }
+  .step-details {
+    background: var(--light);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .step-details li { margin-bottom: 4px; padding-left: 14px; position: relative; }
+  .step-details li::before { content: '→'; position: absolute; left: 0; color: var(--green); }
+
+  /* PORTFOLIOS */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .portfolio-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 3px 16px rgba(13,27,42,0.07);
+    border: 2px solid var(--border);
+  }
+  .portfolio-card.aggressive { border-color: var(--red); }
+  .portfolio-card.balanced { border-color: var(--gold); }
+  .portfolio-card.conservative { border-color: var(--green); }
+  .portfolio-type {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .type-aggressive { color: var(--red); }
+  .type-balanced { color: var(--gold); }
+  .type-conservative { color: var(--green); }
+  .portfolio-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 4px;
+  }
+  .portfolio-return {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+  }
+  .portfolio-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 10px;
+    font-size: 13px;
+  }
+  .pct-bar-wrap { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .pct-bar { height: 100%; border-radius: 3px; }
+  .bar-agg { background: var(--red); }
+  .bar-bal { background: var(--gold); }
+  .bar-con { background: var(--green); }
+  .p-ticker { font-weight: 700; width: 46px; font-size: 12px; }
+  .p-pct { font-size: 12px; color: var(--text-muted); width: 32px; text-align: right; }
+
+  /* WARNING BOX */
+  .warning-box {
+    background: #fff8e6;
+    border: 1px solid #f0c040;
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin-bottom: 20px;
+  }
+  .warning-box h4 {
+    color: #7a5000;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .warning-box ul {
+    padding-left: 18px;
+    font-size: 13.5px;
+    color: #5a3a00;
+  }
+  .warning-box li { margin-bottom: 6px; }
+
+  /* TIPS ROW */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .tip-card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    font-size: 13px;
+    box-shadow: 0 2px 10px rgba(13,27,42,0.05);
+  }
+  .tip-card h5 { font-size: 13px; font-weight: 700; color: var(--dark); margin-bottom: 6px; display: flex; align-items: center; gap: 7px; }
+  .tip-card p { color: var(--text-muted); line-height: 1.5; }
+
+  /* GLOSSARY */
+  .glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+  }
+  .gloss-item {
+    background: white;
+    border-radius: 10px;
+    padding: 16px;
+    border-left: 3px solid var(--green);
+    box-shadow: 0 2px 8px rgba(13,27,42,0.05);
+  }
+  .gloss-term { font-weight: 700; color: var(--dark); font-size: 14px; margin-bottom: 4px; }
+  .gloss-def { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 28px;
+    font-size: 13px;
+  }
+  footer strong { color: rgba(255,255,255,0.8); }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 0;
+  }
+
+  /* NAV */
+  nav {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+    box-shadow: 0 2px 12px rgba(13,27,42,0.06);
+  }
+  nav a {
+    display: inline-block;
+    padding: 14px 4px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  nav a:hover { color: var(--green); border-bottom-color: var(--green); }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--dark);
+    font-size: 15px;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 40px 20px 60px; }
+    .container { padding: 0 16px; }
+    .hero-stats { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">NSE Guide 2026</span>
+  <a href="#performers">Top Performers</a>
+  <a href="#safe">Safe Picks</a>
+  <a href="#timing">Best Time to Buy</a>
+  <a href="#process">How to Invest</a>
+  <a href="#portfolios">Portfolios</a>
+  <a href="#glossary">Glossary</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-badge">NSE Analysis · 2023–2025 Data</div>
+    <h1>Your Beginner's Guide to<br><span>Kenya Stock Market</span></h1>
+    <p>A plain-English breakdown of the Nairobi Securities Exchange — who performed best, which stocks are safest, when to buy, and exactly how to get started.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="val">521%</div><div class="lbl">Best 3yr Growth (KPLC)</div></div>
+      <div class="hero-stat"><div class="val">10+</div><div class="lbl">Companies Analysed</div></div>
+      <div class="hero-stat"><div class="val">6</div><div class="lbl">Safe Beginner Picks</div></div>
+      <div class="hero-stat"><div class="val">3</div><div class="lbl">Portfolio Strategies</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TOP PERFORMERS ═══ -->
+<section class="section" id="performers">
+  <div class="container">
+    <div class="section-label">3-Year Performance (2023–2025)</div>
+    <div class="section-title">The Top Performers</div>
+    <p class="section-sub">These companies grew the most over 3 years. "Growth" means the share price went up by this percentage — e.g. 521% means if you invested KES 1,000, it could have grown to KES 6,210.</p>
+
+    <div class="explainer">
+      <strong>📖 What is share price growth?</strong> If a share costs KES 1.50 and later costs KES 9.31, it grew 521%. As a shareholder, your investment grew too — on paper. You only "lock in" that profit when you sell.
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Company</th>
+            <th>Ticker</th>
+            <th>Start Price</th>
+            <th>End Price</th>
+            <th>3yr Growth</th>
+            <th>Risk Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Kenya Power &amp; Lighting</td>
+            <td><span class="ticker">KPLC</span></td>
+            <td>KES 1.50</td>
+            <td>KES 9.31</td>
+            <td class="growth-high">521%</td>
+            <td><span class="risk-badge risk-very-high">Very High</span></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>East African Portland Cement</td>
+            <td><span class="ticker">PORT</span></td>
+            <td>KES 6.97</td>
+            <td>KES 42.65</td>
+            <td class="growth-high">512%</td>
+            <td><span class="risk-badge risk-very-high">Very High</span></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Sameer Africa</td>
+            <td><span class="ticker">SMER</span></td>
+            <td>KES 2.32</td>
+            <td>KES 6.90</td>
+            <td class="growth-high">197%</td>
+            <td><span class="risk-badge risk-very-high">Very High</span></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>KenGen</td>
+            <td><span class="ticker">KEGN</span></td>
+            <td>KES 2.40</td>
+            <td>KES 6.32</td>
+            <td class="growth-high">163%</td>
+            <td><span class="risk-badge risk-high">High</span></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Liberty Kenya Holdings</td>
+            <td><span class="ticker">LBTY</span></td>
+            <td>KES 4.16</td>
+            <td>KES 9.90</td>
+            <td class="growth-med">138%</td>
+            <td><span class="risk-badge risk-high">High</span></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>I&amp;M Holdings</td>
+            <td><span class="ticker">IMH</span></td>
+            <td>KES 17.77</td>
+            <td>KES 36.33</td>
+            <td class="growth-med">104%</td>
+            <td><span class="risk-badge risk-high">High</span></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Standard Chartered Kenya</td>
+            <td><span class="ticker">SCBK</span></td>
+            <td>KES 159.16</td>
+            <td>KES 294.41</td>
+            <td class="growth-med">85%</td>
+            <td><span class="risk-badge risk-moderate">Moderate</span></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Diamond Trust Bank</td>
+            <td><span class="ticker">DTK</span></td>
+            <td>KES 48.58</td>
+            <td>KES 81.15</td>
+            <td class="growth-med">67%</td>
+            <td><span class="risk-badge risk-moderate">Moderate</span></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>ABSA Bank Kenya</td>
+            <td><span class="ticker">ABSA</span></td>
+            <td>KES 11.84</td>
+            <td>KES 19.27</td>
+            <td class="growth-med">63%</td>
+            <td><span class="risk-badge risk-moderate">Moderate</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px; color:var(--text-muted); margin-top:8px;">⚠️ High growth often comes with high volatility. Past performance does not guarantee future results.</p>
+
+    <!-- TOP 5 CARDS -->
+    <div style="margin-top:40px;">
+      <div class="section-label">Top 5 for Maximum Returns (2026–2027)</div>
+      <div class="section-title">High-Growth Picks</div>
+      <p class="section-sub">These companies have strong recent momentum. They carry higher risk but offer the highest potential reward over the next 1–2 years.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-rank">1</div>
+        <div class="card-name">Kenya Power</div>
+        <div class="card-ticker">KPLC · Energy Sector</div>
+        <div class="card-growth">521%</div>
+        <div class="card-growth-label">3-year growth · 294% in 2025 alone</div>
+        <div class="card-price-row">
+          <div class="price-item"><div class="pl">2023 Price</div><div class="pv">KES 1.50</div></div>
+          <div class="price-item"><div class="pl">2025 Price</div><div class="pv">KES 9.31</div></div>
+        </div>
+        <div class="card-desc">Kenya Power went through major government-backed restructuring and debt relief. Electricity demand keeps growing — more homes, industries, and EV adoption. Target: KES 15–20 by 2027. Very high volatility — can drop 20–30% in a single month.</div>
+      </div>
+      <div class="card">
+        <div class="card-rank">2</div>
+        <div class="card-name">EA Portland Cement</div>
+        <div class="card-ticker">PORT · Construction Sector</div>
+        <div class="card-growth">512%</div>
+        <div class="card-growth-label">3-year growth · 193% in 2025 alone</div>
+        <div class="card-price-row">
+          <div class="price-item"><div class="pl">2023 Price</div><div class="pv">KES 6.97</div></div>
+          <div class="price-item"><div class="pl">2025 Price</div><div class="pv">KES 42.65</div></div>
+        </div>
+        <div class="card-desc">Kenya's infrastructure boom — roads, affordable housing, and SGR expansion — drives cement demand. Government projects give it stability, but the stock can still swing dramatically. Target: KES 60–80 by 2027.</div>
+      </div>
+      <div class="card">
+        <div class="card-rank">3</div>
+        <div class="card-name">I&M Holdings</div>
+        <div class="card-ticker">IMH · Banking Sector</div>
+        <div class="card-growth">104%</div>
+        <div class="card-growth-label">3-year growth · 64% in 2025</div>
+        <div class="card-price-row">
+          <div class="price-item"><div class="pl">2023 Price</div><div class="pv">KES 17.77</div></div>
+          <div class="price-item"><div class="pl">2025 Price</div><div class="pv">KES 36.33</div></div>
+        </div>
+        <div class="card-desc">Best balance of high growth with manageable risk. Strong banking fundamentals and regional expansion into Rwanda and Tanzania. Target: KES 50–60 by 2027. Good for those wanting returns without extreme volatility.</div>
+      </div>
+      <div class="card">
+        <div class="card-rank">4</div>
+        <div class="card-name">Stanchart Kenya</div>
+        <div class="card-ticker">SCBK · Banking Sector</div>
+        <div class="card-growth">85%</div>
+        <div class="card-growth-label">3-year growth · 49% in 2025</div>
+        <div class="card-price-row">
+          <div class="price-item"><div class="pl">2023 Price</div><div class="pv">KES 159.16</div></div>
+          <div class="price-item"><div class="pl">2025 Price</div><div class="pv">KES 294.41</div></div>
+        </div>
+        <div class="card-desc">Lowest volatility among the high performers. Serves large corporate clients, pays stable dividends. Requires higher capital to buy meaningful shares. Target: KES 350–400 by 2027. Premium choice for quality investors.</div>
+      </div>
+      <div class="card">
+        <div class="card-rank">5</div>
+        <div class="card-name">Sameer Africa</div>
+        <div class="card-ticker">SMER · Manufacturing</div>
+        <div class="card-growth">197%</div>
+        <div class="card-growth-label">3-year growth · 206% in 2025 alone</div>
+        <div class="card-price-row">
+          <div class="price-item"><div class="pl">2023 Price</div><div class="pv">KES 2.32</div></div>
+          <div class="price-item"><div class="pl">2025 Price</div><div class="pv">KES 6.90</div></div>
+        </div>
+        <div class="card-desc">Speculative high-reward play. Tire manufacturing benefits from vehicle imports and regional trade growth. Target: KES 10–15 by 2027. Very high risk — only invest what you can afford to lose entirely.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ SAFE PICKS ═══ -->
+<section class="section" id="safe">
+  <div class="container">
+    <div class="section-label">For Risk-Averse Beginners</div>
+    <div class="section-title">6 Safe & Stable Picks</div>
+    <p class="section-sub">These companies grow more slowly but are far less likely to cause big losses. Perfect if you're new to investing and want predictability over excitement.</p>
+
+    <div class="explainer">
+      <strong>📖 What does "low volatility" mean?</strong> Volatility measures how wildly a share price jumps up and down. Low volatility = the price moves gradually and predictably. High volatility = it can swing 20–30% in a week. For beginners, lower volatility means fewer heart-in-mouth moments.
+    </div>
+
+    <div style="margin-bottom:24px;">
+      <div style="font-size:13px; font-weight:700; color:var(--dark); margin-bottom:14px; text-transform:uppercase; letter-spacing:1px;">🛡️ Ultra-Safe Options</div>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:16px; margin-bottom:24px;">
+        <div class="safe-card">
+          <div class="safe-icon icon-bank">🏦</div>
+          <div>
+            <div class="safe-name">Equity Group Holdings</div>
+            <div class="safe-meta">EQTY · Banking · Kenya's largest bank by customers</div>
+            <div class="safe-growth">23.4% growth</div>
+            <div class="safe-desc">The most stable banking stock on the NSE. Over 19 million customers, operates across 7 African countries. Steady growth, regular dividends, and rarely surprises with bad news.</div>
+          </div>
+        </div>
+        <div class="safe-card">
+          <div class="safe-icon icon-industry">⚗️</div>
+          <div>
+            <div class="safe-name">BOC Kenya</div>
+            <div class="safe-meta">BOC · Industrial Gases · Niche stable business</div>
+            <div class="safe-growth">21.5% growth</div>
+            <div class="safe-desc">Supplies industrial and medical gases (oxygen, nitrogen, acetylene). Hospitals, factories, and labs always need these — it's a "boring but reliable" business that keeps performing year after year.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="font-size:13px; font-weight:700; color:var(--dark); margin-bottom:14px; text-transform:uppercase; letter-spacing:1px;">📈 Good Growth, Low Risk</div>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:16px;">
+        <div class="safe-card">
+          <div class="safe-icon icon-bank">💰</div>
+          <div>
+            <div class="safe-name">Centum Investment</div>
+            <div class="safe-meta">CTUM · Diversified Investments · Strong momentum</div>
+            <div class="safe-growth">43% growth</div>
+            <div class="safe-desc">An investment firm that holds stakes in many industries — real estate, private equity, renewable energy. Diversification inside one stock. Strong recent momentum with relatively stable movement.</div>
+          </div>
+        </div>
+        <div class="safe-card">
+          <div class="safe-icon icon-bank">🤝</div>
+          <div>
+            <div class="safe-name">Co-operative Bank</div>
+            <div class="safe-meta">COOP · Banking · Deep rural reach via SACCO network</div>
+            <div class="safe-growth">42.3% growth</div>
+            <div class="safe-desc">Deeply embedded in Kenya's cooperative society network — millions of farmers and workers bank here. Very reliable, consistent growth, and strong dividend payouts. One of the top beginner picks.</div>
+          </div>
+        </div>
+        <div class="safe-card">
+          <div class="safe-icon icon-consumer">🍺</div>
+          <div>
+            <div class="safe-name">East African Breweries</div>
+            <div class="safe-meta">EABL · Consumer Goods · Tusker, Guinness, Serengeti</div>
+            <div class="safe-growth">31.1% growth</div>
+            <div class="safe-desc">People drink beer in good times and bad — EABL's brands (Tusker, Guinness, Senator) are woven into East African culture. Consumer staple stocks are resilient. Pays reliable dividends every year.</div>
+          </div>
+        </div>
+        <div class="safe-card">
+          <div class="safe-icon icon-insurance">🛡️</div>
+          <div>
+            <div class="safe-name">Jubilee Holdings</div>
+            <div class="safe-meta">JUB · Insurance · Regional insurance leader</div>
+            <div class="safe-growth">31% growth</div>
+            <div class="safe-desc">Kenya's largest insurance group, operating across 5 African markets. Insurance is a steady, predictable business — premiums come in every month regardless of economic conditions. Solid long-term hold.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ TIMING ═══ -->
+<section class="section" id="timing">
+  <div class="container">
+    <div class="section-label">Entry Point Strategy</div>
+    <div class="section-title">Best Months to Buy</div>
+    <p class="section-sub">Stock prices follow patterns. Based on historical data from 2023–2025, here's when each of the top 3 beginner picks tends to dip — creating your best buying opportunity.</p>
+
+    <div class="explainer">
+      <strong>📖 Why does timing matter?</strong> Buying shares when they're cheaper means you get more shares for the same money. Even a 5–10% lower entry price can significantly boost your long-term returns. Think of it like waiting for a sale before shopping.
+    </div>
+
+    <div class="timing-grid">
+      <!-- EQTY -->
+      <div class="timing-card">
+        <div class="timing-header eqty">
+          Equity Group (EQTY)
+          <div class="timing-sub">Banking · Best 3-year beginner pick</div>
+        </div>
+        <div class="timing-body">
+          <div style="font-size:12px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:12px;">Best Entry Months</div>
+          <div class="month-row">
+            <div class="month-name">December</div>
+            <div class="month-bar-wrap"><div class="month-bar" style="width:95%"></div></div>
+            <div class="month-price">KES 33.65</div>
+            <span class="month-tag">Best</span>
+          </div>
+          <div class="month-row">
+            <div class="month-name">January</div>
+            <div class="month-bar-wrap"><div class="month-bar" style="width:82%"></div></div>
+            <div class="month-price">KES 34.20</div>
+            <span class="month-tag">2nd</span>
+          </div>
+          <div class="month-row">
+            <div class="month-name">May</div>
+            <div class="month-bar-wrap"><div class="month-bar" style="width:68%"></div></div>
+            <div class="month-price">KES 35.80</div>
+            <span class="month-tag">3rd</span>
+          </div>
+          <div class="timing-why">
+            Year-end profit-taking by large investors causes a dip in Dec–Jan. Uncertainty around Q1 results also keeps prices low in January. March–April offer the most price stability if you prefer predictability.
+          </div>
+        </div>
+      </div>
+
+      <!-- COOP -->
+      <div class="timing-card">
+        <div class="timing-header coop">
+          Co-operative Bank (COOP)
+          <div class="timing-sub">Banking · Best growth-to-risk ratio</div>
+        </div>
+        <div class="timing-body">
+          <div style="font-size:12px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:12px;">Best Entry Months</div>
+          <div class="month-row">
+            <div class="month-name">November</div>
+            <div class="month-bar-wrap"><div class="month-bar" style="width:95%"></div></div>
+            <div class="month-price">KES 10.20</div>
+            <span class="month-tag">Best</span>
+          </div>
+          <div class="month-row">
+            <div class="month-name">December</div>
+            <div class="month-bar-wrap"><div class="month-bar" style="width:80%"></div></div>
+            <div class="month-price">KES 10.95</div>
+            <span class="month-tag">2nd</span>
+          </div>
+          <div class="month-row">
+            <div class="month-name">May</div>
+            <div class="month-bar-wrap"><div class="month-bar" style="width:65%"></div></div>
+            <div class="month-price">KES 11.15</div>
+            <span class="month-tag">3rd</span>
+          </div>
+          <div class="timing-why">
+            End-of-year selling pressure from institutional investors pushes prices down in Nov–Dec. A mid-year correction creates another entry in May. April is very stable if you want low volatility above all else.
+          </div>
+        </div>
+      </div>
+
+      <!-- EABL -->
+      <div class="timing-card">
+        <div class="timing-header eabl">
+          East African Breweries (EABL)
+          <div class="timing-sub">Consumer Goods · Established brand</div>
+        </div>
+        <div class="timing-body">
+          <div style="font-size:12px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:12px;">Best Entry Months</div>
+          <div class="month-row">
+            <div class="month-name">January</div>
+            <div class="month-bar-wrap"><div class="month-bar" style="width:95%"></div></div>
+            <div class="month-price">KES 100</div>
+            <span class="month-tag">Best</span>
+          </div>
+          <div class="month-row">
+            <div class="month-name">March</div>
+            <div class="month-bar-wrap"><div class="month-bar" style="width:80%"></div></div>
+            <div class="month-price">KES 105</div>
+            <span class="month-tag">2nd</span>
+          </div>
+          <div class="month-row">
+            <div class="month-name">February</div>
+            <div class="month-bar-wrap"><div class="month-bar" style="width:70%"></div></div>
+            <div class="month-price">KES 106</div>
+            <span class="month-tag">3rd</span>
+          </div>
+          <div class="timing-why">
+            Consumer spending slows significantly after the December holidays — people have less money in Jan–Feb. This reduces demand for alcohol and drags EABL's price down. April–June offer more stability.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:28px;" class="explainer">
+      <strong>💡 Pro Tip — Dollar-Cost Averaging (DCA):</strong> Instead of putting all your money in at once, split it across 3–4 months. For example, buy EQTY in December, January, and May. This "averages out" your purchase price and protects you from buying at exactly the wrong moment. It's one of the most beginner-friendly strategies used by professional investors.
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ PROCESS ═══ -->
+<section class="section" id="process">
+  <div class="container">
+    <div class="section-label">Step-by-Step Guide</div>
+    <div class="section-title">How to Buy NSE Shares</div>
+    <p class="section-sub">You cannot buy shares directly — you need to set up two accounts first. Here's the full process from scratch to owning your first Kenyan stock.</p>
+
+    <ul class="steps-list">
+      <li class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Open a CDS Account (Central Depository System)</div>
+          <div class="step-desc">This is your electronic "share ownership account" — like an M-Pesa account but for shares. Every share you buy is stored here as a digital record. Without this, you cannot legally own NSE shares.</div>
+          <div class="step-details">
+            <strong>What you need:</strong>
+            <ul>
+              <li>Valid National ID or Passport</li>
+              <li>KRA PIN certificate (get from iTax if you don't have one)</li>
+              <li>Proof of residence — utility bill or bank statement</li>
+              <li>Passport-size photos (2–4)</li>
+              <li>Minimum deposit: typically KES 100–1,000</li>
+            </ul>
+            <br><strong>Where to go:</strong> Any licensed stockbroker in Kenya opens this for you — Genghis Capital, Sterling Capital, AIB Capital, Standard Investment Bank, Dyer &amp; Blair.
+          </div>
+        </div>
+      </li>
+
+      <li class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Choose a Stockbroker &amp; Open a Trading Account</div>
+          <div class="step-desc">A stockbroker is a licensed firm that buys and sells shares on your behalf on the NSE. You cannot trade directly — all transactions must go through them. Think of them as your "agent" on the stock exchange floor.</div>
+          <div class="step-details">
+            <strong>Types of brokers:</strong>
+            <ul>
+              <li>Full-service brokers — Give advice, research, and execute trades. Higher fees but good for beginners (e.g. Genghis Capital, Dyer &amp; Blair)</li>
+              <li>Online/discount brokers — Self-service platforms, lower fees. Good once you know what you're doing (e.g. Hisa app, AIB Capital)</li>
+            </ul>
+            <br><strong>Fees to expect per transaction:</strong>
+            <ul>
+              <li>Brokerage commission: 1.3–2% of trade value</li>
+              <li>CDS fee: 0.12% (capped at KES 1,000)</li>
+              <li>NSE trading fee: 0.12%</li>
+              <li>Stamp duty: KES 20 flat</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Fund Your Trading Account</div>
+          <div class="step-desc">Before you can buy anything, your broker needs money in your account. Transfer funds from your bank or M-Pesa (where supported). Minimum to start meaningfully: KES 5,000–10,000.</div>
+          <div class="step-details">
+            <strong>Payment methods accepted by most brokers:</strong>
+            <ul>
+              <li>Bank transfer via RTGS or EFT</li>
+              <li>M-Pesa (many modern brokers support this)</li>
+              <li>Cheque (takes longer to clear)</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-title">Place Your Buy Order</div>
+          <div class="step-desc">Tell your broker what you want to buy, how many shares, and at what price. You can do this by phone, email, or through their app/online portal.</div>
+          <div class="step-details">
+            <strong>Example:</strong> "Buy 500 shares of Co-operative Bank (COOP) at market price."
+            <br><br>
+            <strong>Two types of orders:</strong>
+            <ul>
+              <li>Market order — Buy immediately at the current price. Simpler, executes fast.</li>
+              <li>Limit order — Only buy if the price drops to your target (e.g. "Buy COOP only if it hits KES 10.00"). May not execute if price never reaches your target.</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <div class="step-title">Wait for Settlement (T+3)</div>
+          <div class="step-desc">After you buy, the NSE has a "T+3" rule — your shares officially appear in your CDS account 3 business days after the transaction date. Your money leaves your account at the same time.</div>
+          <div class="step-details">
+            <ul>
+              <li>T+3 = Trade date + 3 business days</li>
+              <li>You'll receive a contract note from your broker confirming the trade</li>
+              <li>Shares will appear in your CDS statement after settlement</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li class="step-item">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <div class="step-title">Monitor &amp; Collect Dividends</div>
+          <div class="step-desc">Once you own shares, you're an investor. Check prices periodically, review company announcements, and collect dividends — your share of company profits paid out to shareholders.</div>
+          <div class="step-details">
+            <strong>Dividend cycle for the top 3 picks:</strong>
+            <ul>
+              <li>Announced: March–May (with annual results)</li>
+              <li>Paid: June–August</li>
+              <li>You must own shares before the "book closure date" to qualify</li>
+            </ul>
+            <br>
+            <strong>Tax to know:</strong>
+            <ul>
+              <li>Dividends: 5% withholding tax (deducted automatically)</li>
+              <li>Capital gains (profit when you sell): 0.3% tax</li>
+            </ul>
+            <br>
+            <strong>Where to check prices:</strong> NSE website (nse.co.ke), your broker's app, or financial sites like Investing.com
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ PORTFOLIOS ═══ -->
+<section class="section" id="portfolios">
+  <div class="container">
+    <div class="section-label">Investment Strategies</div>
+    <div class="section-title">3 Portfolio Approaches</div>
+    <p class="section-sub">Don't put all your eggs in one basket. Here are three ready-made portfolio mixes depending on your risk appetite. Percentages represent how to split your total investment.</p>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-card aggressive">
+        <div class="portfolio-type type-aggressive">⚡ Aggressive</div>
+        <div class="portfolio-name">Maximum Returns</div>
+        <div class="portfolio-return">Expected: 150–300% over 2 years · Very High Risk</div>
+        <div class="portfolio-item"><span class="p-ticker">KPLC</span><div class="pct-bar-wrap"><div class="pct-bar bar-agg" style="width:30%"></div></div><span class="p-pct">30%</span></div>
+        <div class="portfolio-item"><span class="p-ticker">PORT</span><div class="pct-bar-wrap"><div class="pct-bar bar-agg" style="width:25%"></div></div><span class="p-pct">25%</span></div>
+        <div class="portfolio-item"><span class="p-ticker">SMER</span><div class="pct-bar-wrap"><div class="pct-bar bar-agg" style="width:20%"></div></div><span class="p-pct">20%</span></div>
+        <div class="portfolio-item"><span class="p-ticker">IMH</span><div class="pct-bar-wrap"><div class="pct-bar bar-agg" style="width:15%"></div></div><span class="p-pct">15%</span></div>
+        <div class="portfolio-item"><span class="p-ticker">LBTY</span><div class="pct-bar-wrap"><div class="pct-bar bar-agg" style="width:10%"></div></div><span class="p-pct">10%</span></div>
+        <div style="font-size:12px; color:var(--text-muted); margin-top:14px;">Only for investors who can stomach large swings. Do not invest money you need within 2 years.</div>
+      </div>
+
+      <div class="portfolio-card balanced">
+        <div class="portfolio-type type-balanced">⚖️ Balanced</div>
+        <div class="portfolio-name">High Growth + Safety</div>
+        <div class="portfolio-return">Expected: 80–120% over 2 years · Moderate-High Risk</div>
+        <div class="portfolio-item"><span class="p-ticker">IMH</span><div class="pct-bar-wrap"><div class="pct-bar bar-bal" style="width:25%"></div></div><span class="p-pct">25%</span></div>
+        <div class="portfolio-item"><span class="p-ticker">SCBK</span><div class="pct-bar-wrap"><div class="pct-bar bar-bal" style="width:25%"></div></div><span class="p-pct">25%</span></div>
+        <div class="portfolio-item"><span class="p-ticker">DTK</span><div class="pct-bar-wrap"><div class="pct-bar bar-bal" style="width:20%"></div></div><span class="p-pct">20%</span></div>
+        <div class="portfolio-item"><span class="p-ticker">KPLC</span><div class="pct-bar-wrap"><div class="pct-bar bar-bal" style="width:15%"></div></div><span class="p-pct">15%</span></div>
+        <div class="portfolio-item"><span class="p-ticker">KCB</span><div class="pct-bar-wrap"><div class="pct-bar bar-bal" style="width:15%"></div></div><span class="p-pct">15%</span></div>
+        <div style="font-size:12px; color:var(--text-muted); margin-top:14px;">Good blend of banking reliability and growth exposure. Suitable for investors with a 2–3 year horizon.</div>
+      </div>
+
+      <div class="portfolio-card conservative">
+        <div class="portfolio-type type-conservative">🛡️ Conservative</div>
+        <div class="portfolio-name">Stable Growth</div>
+        <div class="portfolio-return">Expected: 50–80% over 2 years · Moderate Risk</div>
+        <div class="portfolio-item"><span class="p-ticker">SCBK</span><div class="pct-bar-wrap"><div class="pct-bar bar-con" style="width:30%"></div></div><span class="p-pct">30%</span></div>
+        <div class="portfolio-item"><span class="p-ticker">IMH</span><div class="pct-bar-wrap"><div class="pct-bar bar-con" style="width:25%"></div></div><span class="p-pct">25%</span></div>
+        <div class="portfolio-item"><span class="p-ticker">DTK</span><div class="pct-bar-wrap"><div class="pct-bar bar-con" style="width:20%"></div></div><span class="p-pct">20%</span></div>
+        <div class="portfolio-item"><span class="p-ticker">SBIC</span><div class="pct-bar-wrap"><div class="pct-bar bar-con" style="width:15%"></div></div><span class="p-pct">15%</span></div>
+        <div class="portfolio-item"><span class="p-ticker">ABSA</span><div class="pct-bar-wrap"><div class="pct-bar bar-con" style="width:10%"></div></div><span class="p-pct">10%</span></div>
+        <div style="font-size:12px; color:var(--text-muted); margin-top:14px;">Safest high-growth option. Dominated by quality banking stocks with proven track records. Ideal for first-time investors.</div>
+      </div>
+    </div>
+
+    <!-- TIPS -->
+    <div style="margin-top:36px;">
+      <div class="section-label">Practical Beginner Tips</div>
+      <div class="section-title">Things to Know Before You Start</div>
+    </div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h5>💵 Start Small</h5>
+        <p>You can start with as little as KES 5,000–10,000. Buy 100–200 shares of one company first to learn the process before scaling up.</p>
+      </div>
+      <div class="tip-card">
+        <h5>📅 Use Dollar-Cost Averaging</h5>
+        <p>Split your investment across 3–4 months instead of buying all at once. This protects you from bad timing and smooths out price fluctuations.</p>
+      </div>
+      <div class="tip-card">
+        <h5>🎁 Collect Dividends</h5>
+        <p>All top 3 beginner picks pay dividends. Announced March–May, paid June–August. Must own shares before "book closure date" to qualify.</p>
+      </div>
+      <div class="tip-card">
+        <h5>🧘 Don't Panic Sell</h5>
+        <p>Short-term dips are normal — even good stocks drop 10–15% sometimes. The 3-year trend shows consistent growth. Patience is your greatest asset.</p>
+      </div>
+      <div class="tip-card">
+        <h5>🌍 Diversify</h5>
+        <p>Never put all your money in one stock. Spread across at least 5–7 companies from different sectors so one bad performer doesn't wipe you out.</p>
+      </div>
+      <div class="tip-card">
+        <h5>📊 Review Quarterly</h5>
+        <p>Companies publish results every 3 months. Read headline summaries — profit up or down? These move share prices. Your broker will send updates.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:28px;" class="warning-box">
+      <h4>⚠️ Important Warnings</h4>
+      <ul>
+        <li><strong>KPLC &amp; PORT:</strong> Despite 500%+ growth, these stocks can drop 20–30% in a single month. Only invest money you can afford to lose.</li>
+        <li><strong>Penny stocks (HAFR, SMER, CABL):</strong> Low prices attract beginners, but low trading volumes mean you might struggle to sell when you want to.</li>
+        <li><strong>Momentum can break:</strong> High-growth stocks in 2025 may slow in 2026. If the 2025 momentum breaks, losses can be severe and quick.</li>
+        <li><strong>This analysis is based on historical data.</strong> Past performance does not guarantee future results. Consider speaking to a licensed financial advisor.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ GLOSSARY ═══ -->
+<section class="section" id="glossary">
+  <div class="container">
+    <div class="section-label">Plain English Definitions</div>
+    <div class="section-title">Beginner's Glossary</div>
+    <p class="section-sub">Stock market terms can feel intimidating. Here's what the key words actually mean.</p>
+
+    <div class="glossary-grid">
+      <div class="gloss-item">
+        <div class="gloss-term">Share / Stock</div>
+        <div class="gloss-def">A tiny piece of ownership in a company. If EABL has 1 billion shares and you own 1,000 of them, you own 0.0001% of the company.</div>
+      </div>
+      <div class="gloss-item">
+        <div class="gloss-term">NSE (Nairobi Securities Exchange)</div>
+        <div class="gloss-def">Kenya's official stock exchange — the marketplace where shares of Kenyan companies are bought and sold.</div>
+      </div>
+      <div class="gloss-item">
+        <div class="gloss-term">CDS Account</div>
+        <div class="gloss-def">Central Depository System — your digital account where NSE shares are stored electronically. Like a bank account, but for shares.</div>
+      </div>
+      <div class="gloss-item">
+        <div class="gloss-term">Stockbroker</div>
+        <div class="gloss-def">A licensed firm that buys and sells shares on your behalf. You cannot trade on the NSE directly — all orders go through a broker.</div>
+      </div>
+      <div class="gloss-item">
+        <div class="gloss-term">Dividend</div>
+        <div class="gloss-def">A portion of a company's profits paid to shareholders. If COOP earns KES 10 billion profit, it may distribute KES 1 per share to all shareholders.</div>
+      </div>
+      <div class="gloss-item">
+        <div class="gloss-term">Volatility</div>
+        <div class="gloss-def">How much a share price swings up and down. High volatility = dramatic price swings. Low volatility = gradual, predictable movement.</div>
+      </div>
+      <div class="gloss-item">
+        <div class="gloss-term">Market Order</div>
+        <div class="gloss-def">A buy instruction that says "buy now at whatever the current price is." Fast and guaranteed to execute.</div>
+      </div>
+      <div class="gloss-item">
+        <div class="gloss-term">Limit Order</div>
+        <div class="gloss-def">A buy instruction that says "only buy if the price drops to X." May never execute if the price doesn't reach your target.</div>
+      </div>
+      <div class="gloss-item">
+        <div class="gloss-term">T+3 Settlement</div>
+        <div class="gloss-def">After buying shares, they appear in your CDS account 3 business days later. This is NSE's official settlement window.</div>
+      </div>
+      <div class="gloss-item">
+        <div class="gloss-term">Book Closure Date</div>
+        <div class="gloss-def">The deadline by which you must own shares to qualify for a dividend. If you buy after this date, you miss that round of dividends.</div>
+      </div>
+      <div class="gloss-item">
+        <div class="gloss-term">Capital Gain</div>
+        <div class="gloss-def">The profit you make when you sell a share for more than you paid. E.g., bought at KES 10, sold at KES 15 = KES 5 capital gain per share.</div>
+      </div>
+      <div class="gloss-item">
+        <div class="gloss-term">Dollar-Cost Averaging (DCA)</div>
+        <div class="gloss-def">Splitting your investment across multiple months to average out your purchase price, reducing the impact of buying at a bad time.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <strong>NSE Investment Guide 2026</strong> · Analysis based on 2023–2025 NSE historical data<br>
+    <span style="font-size:12px; margin-top:6px; display:block;">⚠️ This document is for educational purposes only and does not constitute financial advice. Always consult a licensed financial advisor before investing. Past performance is not indicative of future results.</span>
+  </div>
+</footer>
+
+</body>
+</html>
