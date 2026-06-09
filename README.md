@@ -1,7 +1,7 @@
 # NSE-2025-dataset-analysis
 After analysing the NSE 2025 dataset, I created an NSE Investment Guide 
 
-# Six sections, all beginner-friendly:
+# Sections:
 
 ## Top Performers 
 A full table of the 9 best-performing companies with their growth, price movement, and risk level. Plus detailed cards for the Top 5 maximum-return picks with plain explanations of why each one grew.
